@@ -16,38 +16,28 @@
           </a>
         </li>
      
-        <li class="nav-item">
-          <a class="nav-link " href="/admin/areas">
-            <span data-feather="briefcase"></span>
-            Areas <span class="sr-only"></span>
-          </a>
-        </li>
+       
      
-      <li class="nav-item">
-        <a class="nav-link " href="/admin/rosters">
-          <span data-feather="clock"></span>
-          Rosters <span class="sr-only"></span>
-        </a>
-      </li>
+      
       @endif 
-
       @if(Auth::user()->role_id < 4)
         <li class="nav-item">
-          <a class="nav-link" href="/workers">
+          <a class="nav-link" href="/clientes">
             <span data-feather="activity"></span>
-            Trabajadores
+            Clientes
           </a>
         </li>
       @endif 
-      
-      @if(Auth::user()->role_id < 3)
+      @if(Auth::user()->role_id < 4)
         <li class="nav-item">
-          <a class="nav-link" href="/reports">
+          <a class="nav-link" href="/documentos">
             <span data-feather="bar-chart-2"></span>
-            Reportes
+            Documentos
           </a>
         </li>
-      @endif      
+      @endif 
+     
+           
     </ul>
   </div>
 </nav>

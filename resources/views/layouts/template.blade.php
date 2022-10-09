@@ -8,10 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Temperatura-Oxigeno G4S</title>
+    <title>sistema Cobranza</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
-
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>            
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel = "stylesheet" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>

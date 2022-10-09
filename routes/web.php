@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
   Route::get('/exportWorker', 'App\Http\Controllers\ReportController@exportWorker')->name('exportWorker');
   Route::get('/exportResult', 'App\Http\Controllers\ReportController@exportResult')->name('exportResult');
   Route::get('exportResultForm/{id}', 'App\Http\Controllers\ReportController@exportResultForm');
+  Route::get('/clientes/buscar', 'App\Http\Controllers\ClienteController@buscar');
 
   //Rutas autenticacion
   Auth::routes();
@@ -41,4 +42,12 @@ Route::group(['middleware' => ['cors']], function () {
 
   //Rutas crud results
   Route::resource('workers/{id}/results', 'App\Http\Controllers\ResultsController');
+
+  //Rutas crud clientes
+  Route::resource('clientes', 'App\Http\Controllers\ClienteController');
+
+  
+
+  //Rutas crud documentos
+  Route::resource('documentos', 'App\Http\Controllers\DocumentoController');
 });
