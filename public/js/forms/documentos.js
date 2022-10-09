@@ -123,7 +123,7 @@ $(document).ready(function (){
 });
 
 function descartarServicio(posicion){
-	listadoArticulos.splice(posicion, 1);
+	listadoServicios.splice(posicion, 1);
 	actualizarTablaServicios();
 }
 
@@ -155,5 +155,3 @@ function actualizarTablaServicios(){
 	)
 	);
 }
-
-

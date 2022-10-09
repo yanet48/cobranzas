@@ -106,12 +106,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4>
-					Buscar cliente
-					<span class="pull-right">
-						<a class="btn btn-success btn-sm text-center" href="/clientes/create" target="_blank" >
-							<i class="fa fa-user-plus" aria-hidden="true"></i>
-						</a>
-					</span>
+					Buscar cliente					
 				</h4>
 			</div>
 			<div class="modal-body">
