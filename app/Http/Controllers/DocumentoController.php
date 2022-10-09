@@ -186,7 +186,7 @@ class DocumentoController extends Controller
         });
 
         $formatter = new NumeroALetras();
-        $letras = 'SOLES';
+        $letras = 'NUEVOS SOLES';
         if (($documento->moneda) == "USD")
             
                 $letras = 'DOLARES AMERICANOS';
@@ -204,8 +204,8 @@ class DocumentoController extends Controller
         ->currencySymbol($documento->moneda) 
         ->currencyCode('USD')
         ->currencyFormat('{SYMBOL} {VALUE}')
-        ->currencyThousandsSeparator('.')
-        ->currencyDecimalPoint(',')
+        ->currencyThousandsSeparator(',')
+        ->currencyDecimalPoint('.')
         ->addItems($items->toArray()) 
         ->notes($TotalNumero)
       
@@ -313,8 +313,8 @@ class DocumentoController extends Controller
         ->currencySymbol($documento->moneda) 
         ->currencyCode('USD')
         ->currencyFormat('{SYMBOL} {VALUE}')
-        ->currencyThousandsSeparator('.')
-        ->currencyDecimalPoint(',')
+        ->currencyThousandsSeparator(',')
+        ->currencyDecimalPoint('.')
         ->addItems($items->toArray()) 
         ->notes($TotalNumero)
       
