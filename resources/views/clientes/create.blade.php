@@ -13,7 +13,7 @@
                 <td>{!! Form::text('razonsocial', null, ['class' => 'form-control', 'required']) !!} </td>
             </tr>
             <tr>
-                <td>{!! Form::label('documento', 'Documento(RUC)') !!} </td>
+                <td>{!! Form::label('documento', 'Documento(DNI/RUC)') !!} </td>
                 <td>{!! Form::text('documento', null, ['class' => 'form-control', 'required']) !!} </td>
             </tr>
             <tr>

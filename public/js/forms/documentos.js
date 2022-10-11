@@ -6,6 +6,23 @@ $(document).ready(function (){
 	$('#btnAdicionarServicio').on('click', function(e){
 		e.preventDefault();
 		$("#tablaServicios").html("");
+		if ($("#txtDescripcion").val()=='')
+		{
+			alert('Debe ingresar descripcion')
+		 	e.preventDefault();
+		}
+		else if ($("#txtPrecioUnitario").val()=='')
+		{
+			alert('Debe ingresar precio unitario')
+		 	e.preventDefault();
+		}
+		else if ($("#txtTotal").val()=='')
+		{
+			alert('Debe ingresar total')
+		 	e.preventDefault();
+		}
+		else
+		{
 		var descripcion_servicio = $('#txtDescripcion').val();
 		var preciounitario = $('#txtPrecioUnitario').val();
 		var total = $('#txtTotal').val();
@@ -18,6 +35,7 @@ $(document).ready(function (){
 		$('#txtDescripcion').val('');
 		$('#txtPrecioUnitario').val('');
 		$('#txtTotal').val('');
+		}
 	});
 
 	$('#btnBuscarCliente').on('click', function(e) {
@@ -134,11 +152,11 @@ function actualizarTablaServicios(){
 		$("#tablaServicios").append(
 			$('<tr></tr>').html(
 				"<td>" 
-					+ "<textarea class='form-control input-sm' value='"+ listadoServicios[i]["descripcion_servicio"] + "'> "+ listadoServicios[i]["descripcion_servicio"]+"</textarea>"
+					+ "<textarea class='form-control input-sm text-left' readonly='true' value='"+ listadoServicios[i]["descripcion_servicio"] + "'> "+ listadoServicios[i]["descripcion_servicio"]+"</textarea>"
 				+ "</td><td>"
-					+ "<input type='number' class='form-control input-sm' value="+ listadoServicios[i]["preciounitario"] + ">"
+					+ "<input type='number' class='form-control input-sm text-right' readonly='true' value="+ listadoServicios[i]["preciounitario"] + ">"
 				+ "</td><td class='td_subTotal'>" 
-					+ "<input type='number' class='form-control input-sm' value="+ listadoServicios[i]["total"] + ">"					
+					+ "<input type='number' class='form-control input-sm text-right' readonly='true' value="+ listadoServicios[i]["total"] + ">"					
 				+ "</td><td class='text-center'>"
 					+ "<a style='color: #8a8686;' onclick='descartarServicio(" + i + ");''><i class='fa fa-trash'></i></a>"
 				+ "</td>"

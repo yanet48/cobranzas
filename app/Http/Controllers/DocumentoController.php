@@ -56,7 +56,7 @@ class DocumentoController extends Controller
        }
                 
         $Valor=(int)$Valor+1;
-        $Numero = str_pad($Valor, 7-strlen((string)$Valor), "0", STR_PAD_LEFT);
+        $Numero = str_pad($Valor, 6, "0", STR_PAD_LEFT);
 
         return view("documentos.create",compact('FechaEmision','Estado','Serie','Numero','Condicion','Estado'));
     }
@@ -157,7 +157,7 @@ class DocumentoController extends Controller
                 'address2' =>  'Sachaca - Arequipa - Arequipa',
                 'phone' => 'Cel.:958316677',
                 'email' => 'administracion@carvitur.com.pe',
-                'email1' => 'contabilidad@carvitura.com.pe',
+                'email1' => 'contabilidad@carvitur.com.pe',
             ],
         ]);
         $newDate = date("d/m/Y", strtotime($documento->fecha_emision));
@@ -183,6 +183,7 @@ class DocumentoController extends Controller
                 ->pricePerUnit($servicios->preciounitario)
                 ->quantity($servicios->subtotal);
                 $items->push($item);
+                
         });
 
         $formatter = new NumeroALetras();
@@ -194,10 +195,10 @@ class DocumentoController extends Controller
         $TotalNumero = $formatter->toInvoice($total, 2, $letras);
 
         
-        $invoiceDocument = InvoiceDocument::make('receipt')
+        $invoiceDocument = InvoiceDocument::make('documento')
         ->status('R.U.C. N° 20498225536')
         ->series($documento->serie)
-        ->sequence($documento->numero)
+        ->sequence((int)$documento->numero)
         ->serialNumberFormat('{SERIES}-{SEQUENCE}')
         ->seller($seller)
         ->buyer($customer)
@@ -212,6 +213,7 @@ class DocumentoController extends Controller
         ->logo(public_path('vendor/invoices/carvisur_logo.jpeg'));
 
         return $invoiceDocument->stream();
+       //return $invoiceDocument->toHtml();
 
 
     }

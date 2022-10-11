@@ -51,18 +51,18 @@
 					<table width="100%" class="table-condensed table-striped table-bordered">
 						<thead>
 							<tr>
-								<th class="text-center">DESCRIPCION DE SERVICIO</th>
-								<th class="text-center" width="80px">P. Unitario</th>
-								<th class="text-center" width="80px">Total</th>
+								<th class="text-center" width="450px">DESCRIPCION DE SERVICIO</th>
+								<th class="text-center" width="60px">P. Unitario</th>
+								<th class="text-center" width="60px">Total</th>
 								<th class="text-center" width="30px"></th>
 							</tr>
 						</thead> 
 						<tbody id="tablaServicios">
             @foreach($servicios as $row)
               <tr>          
-                <td>{{$row->descripcion}}</td>
-                <td>{{$row->preciounitario}}</td>
-                <td>{{$row->subtotal}}</td>          
+                <td><pre>{{$row->descripcion}}</pre></td>
+                <td class="text-right">{{$row->preciounitario}}</td>
+                <td class="text-right">{{$row->subtotal}}</td>          
                </tr>
             @endforeach 
 						</tbody>

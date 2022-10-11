@@ -147,7 +147,7 @@
                 border: none !important;
             }
             .cool-gray {
-                color: #6B7280;
+                color: #6B7280;             
             }
             .carvitur-name {
                 font-size: 15px;
@@ -162,10 +162,18 @@
                 border-top: 1px solid #dee2e6;
                 padding: 0.50rem;
             }
-            .td-items {
-                height:600px;
+            .body-items {
+                height:800px;
                 
             }
+            
+            pre {
+            display: block;
+            font-family: "Arial, Helvetica, sans-serif";
+            white-space: pre;
+            margin: 0em 0px;
+            }
+            
         </style>
     </head>
 
@@ -317,21 +325,20 @@
                 <thead>
                     <tr>
                         
-                        <th scope="col" class="">DESCRIPCION DE SERVICIOS</th>                    
+                        <th scope="col" class="text-left border-0">DESCRIPCION DE SERVICIOS</th>                    
                         <th scope="col" class="text-right border-0">P.UNITARIO</th>
                         <th scope="col" class="text-right border-0">TOTAL</th>
                     
                     </tr>
                 </thead>
-                <tbody class="td-items">
+                <tbody>
                     {{-- Items --}}
                     {{ $total =0; }}
                     @foreach($invoice->items as $item)
                     <tr>
-                        <td >
-                            {{ $item->title }}
-                            @if($item->description)
-                                <p class="cool-gray">{{ $item->description }}</p>
+                        <td class="text-left td-text" >                            
+                            @if($item->title)
+                            <pre>{{$item->title}}</pre>
                             @endif
                         </td>
                         <td class="text-right">

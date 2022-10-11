@@ -73,9 +73,9 @@
 					<table width="100%" class="table-condensed table-striped table-bordered">
 						<thead>
 							<tr>
-								<th class="text-center">DESCRIPCION DE SERVICIO</th>
-								<th class="text-center" width="80px">P. Unitario</th>
-								<th class="text-center" width="80px">Total</th>
+								<th class="text-center" width="450px">DESCRIPCION DE SERVICIO</th>
+								<th class="text-center" width="60px">P. Unitario</th>
+								<th class="text-center" width="60px">Total</th>
 								<th class="text-center" width="30px"></th>
 							</tr>
 						</thead> 
