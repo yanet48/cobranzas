@@ -300,7 +300,7 @@
                         <tr class="border-td">
                         <td>                         
                                 <p>
-                                    <strong> RUC: </strong>
+                                    <strong>DNI / RUC: </strong>
                                             @if($invoice->buyer->ruc)
                                                 {{ $invoice->buyer->ruc }}
                                             @endif       
